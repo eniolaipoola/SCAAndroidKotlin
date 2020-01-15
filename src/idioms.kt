@@ -1,7 +1,7 @@
 import java.io.File
 
 /**
- * Copyright (c) 2020 Adediji Adeyinka(tdscientist)
+ * Copyright (c) 2020 Eniola Ipoola
  * All rights reserved
  * Created on 13-Jan-2020
  */
@@ -38,6 +38,19 @@ fun transverseMap(){
     val values = listOf("eniola", "segun", "ope")
     val names = values[1] ?: throw IllegalStateException("Nothing happened")
     println(names)
+
+
+    //nullability in lists
+    var marbles : Int ? = null
+    var lotOfFish: List<String?> = listOf(null, null)
+    var moreFish: List<Int> ? = null
+
+    //allow both list and elements to be null
+    var allFish: List<String?> ? = null
+    allFish = listOf(null, null)
+
+
+
 }
 
 

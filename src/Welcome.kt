@@ -29,14 +29,25 @@ fun main(){
     lambdaExpression()
     //describe()
 
-    var user = User()
+    val user = Author()
     println(user.age)
     println(user.sex)
     println(user.username)
+
+    rainbowColor()
+    fishBreed()
+
+    val fishFeedTreatResult = checkNullability()
+    println("FishFoodTreat is not zero when decremented, its value is " + fishFeedTreatResult)
+
+    stringInKotlin()
+    booleanInKotlin()
+    loopsInKotlin()
 }
 
 fun sum(a: Int, b:Int): Int {
     return a + b
+
 }
 
 /*Function with an expression body and inferred return type*/
@@ -207,5 +218,102 @@ fun lambdaExpression(){
 
 }
 
+
+fun checkNullability(): Int{
+    val fishFeedsTreat = 5
+    println("decrementing fishFeedTreat gives " + fishFeedsTreat.dec())
+    println("Thought this will print a boolean " + fishFeedsTreat?: 0)
+    //brought this warning cause the variable can never be null since it was initialized
+    return fishFeedsTreat?.dec() ?: 0
+}
+
+fun fishBreed(){
+    val parentFish: Int = 2
+    val firstBreed = 71
+    val secondBreed = 233
+    val killedFish: Int = 13
+
+    if(secondBreed > firstBreed)
+        println("Second breed of fish is greater than first breed")
+    else
+        println("That's unusual, first breed is greater")
+
+    val operator = parentFish + firstBreed + secondBreed - killedFish
+    val numOfAcquariomLeft = operator /  30
+    println("Number of fishes left is " + operator)
+    println("number of acquarium required are " + numOfAcquariomLeft)
+
+    //all these lines of code done in a shorter way
+    val fishResult = parentFish.plus(firstBreed).plus(secondBreed).minus(killedFish).div(30)
+    println(fishResult)
+}
+
+fun rainbowColor(){
+    //done intentionally
+    var orangeBlack = "black color"
+    //update variable value
+    orangeBlack = "This colour is orange black (whatever that means)"
+    println(orangeBlack)
+
+    //set variable to null
+    var black: String? = null
+    black = null
+    println(black)
+
+    val greenColor = "green"
+    //greenColor = "this sl"
+    println(greenColor)
+
+    //list that is null
+    val myList: List<String?> = listOf(null, null)
+    val newList: List<String> ? = null
+
+    val checkListnullability: List<String?> ? =
+        listOf(null, null)
+
+    println("Null Lists are " + myList)
+    println("Null Lists are in a different way noe " + checkListnullability)
+    println("Null Lists are " + newList)
+
+    val nullTest: Int? = null
+    nullTest?.inc() ?: 0
+
+    println("null test is " + nullTest)
+}
+
+fun stringInKotlin(){
+    println("Hello " + "Eniola")
+
+    val age = 25
+    val sex = "female"
+    println("Eniola is a $sex and she is $age years old")
+}
+
+fun booleanInKotlin(){
+    println( "fish" == "plant")
+    println( "fish" == "fish")
+
+    val welcomeMessage = "Hello and welcome to Kotlin"
+    when (welcomeMessage.length) {
+        0 -> println("Nothing to say?")
+        in 1..50 -> println("Perfect")
+        else -> println("Too long!")
+    }
+}
+
+//loops
+fun loopsInKotlin(){
+    val fish = 12
+    val food = 5
+    val swarm = listOf(fish, food)
+    println(swarm)
+
+    val school = arrayOf("OAU", "OOU", "UI", "Uni Ilorin")
+    val numbers = intArrayOf(1,2,3)
+    val mix = arrayOf("Eniola", 25)
+    //nest arrays
+    val bigswarm = arrayOf(swarm, arrayOf("dolphine, eagle"))
+
+}
 
 
