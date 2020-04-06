@@ -6,6 +6,11 @@ import java.io.File
  * Created on 13-Jan-2020
  */
 
+fun main(){
+    transverseMap()
+    filterList()
+}
+
 /** Transversing a map/list of pairs*/
 fun transverseMap(){
     val map = mapOf<Int, String>(1 to "Eniola", 2 to "Segun", 3 to "Opeyemi")
@@ -48,8 +53,17 @@ fun transverseMap(){
     //allow both list and elements to be null
     var allFish: List<String?> ? = null
     allFish = listOf(null, null)
+}
 
+fun filterList(){
+    val list = listOf( 1, 2, 3)
+    val positives = list.filter{it > 0 }
+    val positives2 = list.filter{ x -> x > 0 }
+    println("filter list method returns " + positives)
+    println("filter list method two returns " + positives2)
+}
 
+fun checkElementPresence(){
 
 }
 
