@@ -9,6 +9,9 @@ class Author {
     var age: Int = 25
     var sex: String = "female"
 
+    init {
+
+    }
 
     fun User(username:String, age:Int, sex:String) : Author{
         val result = Author()
