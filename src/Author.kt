@@ -18,5 +18,6 @@ class Author {
         return result
     }
 
-    private data class User(var username: String, var age: Int = 0, var sex: String = "", var email: String = "")
+    private data class User(
+        var username: String, var age: Int = 0, var sex: String = "", var email: String = "")
 }

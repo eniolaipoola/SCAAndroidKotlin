@@ -59,11 +59,20 @@ fun filterList(){
     val list = listOf( 1, 2, 3)
     val positives = list.filter{it > 0 }
     val positives2 = list.filter{ x -> x > 0 }
+    val positives3 = list.filter{ x -> x > 2 }
     println("filter list method returns " + positives)
     println("filter list method two returns " + positives2)
+    println("filter list method two returns " + positives2)
+
+    positives3.map{
+        it.plus(2)
+        println(it.plus(2))
+    }
+
 }
 
 fun checkElementPresence(){
+    val content = "hello"
 
 }
 
